@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet", href={{url_for('static', filename='styles.css')}} type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

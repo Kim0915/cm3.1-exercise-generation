@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %}{{topic}}{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+    <img src="https://lh4.googleusercontent.com/zlZaPKBO8pOKv1uQ6VE29IcLjJM4fhQI3ZmkiD-esCoBOT-JHYl27Msjplm5BbHxKvxv0OnVI26InECM710_j-gGEI4tJoQ0yi4MJ-xxhrTEzxupoW5k-Ju3o4OFotj8LXoGCMMOZZPNL5I2Yiqq5Q" alt='logo' width='100' margin='0;0;0'>
+    <h1 class="title-text" id="topic-title">Python Exercises: {{topic}}</h1>
+    <div class="container" id="questions">
+      {% for i in range(questions|length) %}
+      <div class="item"><h3> Question Number {{i+1}} </h3>
+        <md-block> {{questions[i]}} </md-block>
+        </div>
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}

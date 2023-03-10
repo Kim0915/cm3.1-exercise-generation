@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %}Difficulty/Topic Selection{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+<form class="submission-form" action="{{ url_for('selection_form') }}" method="post">
+  
+
+        <span class="selection-box" style="width:200px;">
+            <select id="difficulty" name="difficulty">
+              <option>Select Difficulty:</option>
+              <option>Easy</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+              <option>Mixed</option>
+            </select>
+        </span>
+
+          <span class="selection-box" style="width:200px;">
+            <select id="topic" name="topic">
+              <option>Select Topic:</option>
+              <option>Print Statements</option>
+              <option>Variables</option>
+              <option>Data Types</option>
+              <option>Integer Operations</option>
+              <option>Booleans</option>
+              <option>Conditional Statements</option>
+              <option>For Loops</option>
+              <option>While Loops</option>
+              <option>Functions</option>
+              <option>Lists</option>
+              <option>String Functions</option>
+              <option>Dictionaries:</option>
+              <option>Algorithms</option>
+            </select>
+        </span>
+        <div style="margin-top: 10px; margin-left: 100px; ">
+  <input type="submit">
+        </div>
+      </form>
+{% endblock %}
